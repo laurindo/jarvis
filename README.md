@@ -1,3 +1,5 @@
+[Jarvis icon](https://res.cloudinary.com/luneswallet/image/upload/v1579368287/jarvis/like-jarvis.png)
+
 ## JARVIS - Sua plataforma inteligente
 
 Jarvis é um projeto construido em React Native para criação, listagem e controle de transações.
