@@ -1,10 +1,12 @@
+// modules
+import React, { useState, useEffect } from 'react';
+import { Platform, StatusBar, StyleSheet, View } from 'react-native';
 import { AppLoading } from 'expo';
 import { Asset } from 'expo-asset';
 import * as Font from 'expo-font';
-import React, { useState } from 'react';
-import { Platform, StatusBar, StyleSheet, View } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 
+// components
 import AppNavigator from './navigation/AppNavigator';
 
 export default function App(props) {
@@ -57,6 +59,6 @@ function handleFinishLoading(setLoadingComplete) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#620ab2',
   },
 });
