@@ -7,7 +7,7 @@ import * as Font from 'expo-font';
 import { Ionicons } from '@expo/vector-icons';
 
 // components
-import AppNavigator from './navigation/AppNavigator';
+import AppNavigator from './navigation';
 
 export default function App(props) {
   const [isLoadingComplete, setLoadingComplete] = useState(false);
@@ -42,6 +42,9 @@ async function loadResourcesAsync() {
       // We include SpaceMono because we use it in HomeScreen.js. Feel free to
       // remove this if you are not using it in your app
       'space-mono': require('./assets/fonts/SpaceMono-Regular.ttf'),
+      'OpenSans-Bold': require('./assets/fonts/open-sans.bold.ttf'),
+      'OpenSans-Regular': require('./assets/fonts/open-sans.regular.ttf'),
+      'OpenSans-Light': require('./assets/fonts/open-sans.light.ttf'),
     }),
   ]);
 }
