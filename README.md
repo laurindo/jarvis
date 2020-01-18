@@ -1,4 +1,4 @@
-[Jarvis icon](https://res.cloudinary.com/luneswallet/image/upload/v1579368287/jarvis/like-jarvis.png)
+![image](https://res.cloudinary.com/luneswallet/image/upload/v1579368287/jarvis/like-jarvis.png)
 
 ## JARVIS - Sua plataforma inteligente
 
