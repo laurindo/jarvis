@@ -2,8 +2,9 @@ import React from "react";
 import {StyleSheet, Text} from "react-native";
 import {FONT_FAMILY_BOLD, FONT_FAMILY_LIGHT, FONT_FAMILY_REGULAR, FONT_SIZE_16, FONT_SIZE_24, FONT_SIZE_32} from "../../styles/typography";
 import {SCALE_12, SCALE_8} from "../../styles/spacing";
+import {GRAY_MEDIUM, WHITE} from "../../styles/colors";
 
-const typography = (props, style) => <Text style={style}>{props.children}</Text>;
+const typography = (props, style) => <Text style={[style, props.style]}>{props.children}</Text>;
 const H1 = props => typography(props, styles.H1);
 const H2 = props => typography(props, styles.H2);
 const H3 = props => typography(props, styles.H3);
@@ -16,37 +17,51 @@ const styles = StyleSheet.create({
 	H1: {
 		fontFamily: FONT_FAMILY_BOLD,
 		fontSize: FONT_SIZE_32,
-		margin: `${SCALE_12} 0`
+		marginTop: SCALE_12,
+		marginBottom: SCALE_12,
+		color: WHITE
 	},
 	H2: {
 		fontFamily: FONT_FAMILY_BOLD,
 		fontSize: FONT_SIZE_24,
-		margin: `${SCALE_12} 0`
+		marginTop: SCALE_12,
+		marginBottom: SCALE_12,
+		color: WHITE
 	},
 	H3: {
 		fontFamily: FONT_FAMILY_BOLD,
 		fontSize: FONT_SIZE_16,
-		margin: `${SCALE_12} 0`
+		marginTop: SCALE_12,
+		marginBottom: SCALE_12,
+		color: WHITE
 	},
 	P1: {
 		fontFamily: FONT_FAMILY_REGULAR,
 		fontSize: FONT_SIZE_24,
-		margin: `${SCALE_8} 0`
+		marginTop: SCALE_8,
+		marginBottom: SCALE_8,
+		color: WHITE
 	},
 	P2: {
 		fontFamily: FONT_FAMILY_REGULAR,
 		fontSize: FONT_SIZE_16,
-		margin: `${SCALE_8} 0`
+		marginTop: SCALE_8,
+		marginBottom: SCALE_8,
+		color: WHITE
 	},
 	S1: {
 		fontFamily: FONT_FAMILY_LIGHT,
 		fontSize: FONT_SIZE_24,
-		margin: `${SCALE_8} 0`
+		marginTop: SCALE_8,
+		marginBottom: SCALE_8,
+		color: GRAY_MEDIUM
 	},
 	S2: {
 		fontFamily: FONT_FAMILY_LIGHT,
 		fontSize: FONT_SIZE_16,
-		margin: `${SCALE_8} 0`
+		marginTop: SCALE_8,
+		marginBottom: SCALE_8,
+		color: GRAY_MEDIUM
 	},
 });
 
