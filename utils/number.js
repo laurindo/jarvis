@@ -1,0 +1,1 @@
+export const getTotal = values => values.reduce((a, n) => { return a + n }, 0).toFixed(2);
