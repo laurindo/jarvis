@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HeaderTotal/> match snapshot 1`] = `
+<View
+  style={
+    Object {
+      "flexDirection": "row",
+      "justifyContent": "space-between",
+      "paddingLeft": 16,
+      "paddingRight": 16,
+    }
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#FFFFFF",
+          "fontFamily": "OpenSans-Bold",
+          "fontSize": 32,
+          "marginBottom": 24,
+          "marginTop": 24,
+        },
+        undefined,
+        undefined,
+        undefined,
+      ]
+    }
+  >
+    <Text>
+      R$
+       
+      2000
+    </Text>
+  </Text>
+</View>
+`;

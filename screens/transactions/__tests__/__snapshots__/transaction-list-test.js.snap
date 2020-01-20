@@ -1,0 +1,111 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TransactionsScreen render TransactionsScreen 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#620ab2",
+        "flex": 1,
+        "padding": 36,
+      },
+      Object {
+        "backgroundColor": "#620ab2",
+        "flexDirection": "column",
+        "justifyContent": "space-between",
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "paddingBottom": 16,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "justifyContent": "center",
+          "padding": 72,
+        }
+      }
+      testID="no-transactions"
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#FFFFFF",
+              "fontFamily": "OpenSans-Regular",
+              "fontSize": 32,
+              "marginBottom": 16,
+              "marginTop": 16,
+            },
+            undefined,
+            undefined,
+            undefined,
+          ]
+        }
+      >
+        Você não possui transações
+      </Text>
+    </View>
+  </View>
+  <View>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#2AC062",
+            "borderRadius": 5,
+            "display": "flex",
+            "height": 50,
+            "justifyContent": "center",
+            "shadowColor": "#2AC062",
+            "shadowOffset": Object {
+              "height": 10,
+              "width": 0,
+            },
+            "shadowOpacity": 0.9,
+            "shadowRadius": 20,
+          },
+          undefined,
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#FFFFFF",
+              "fontFamily": "OpenSans-Regular",
+              "fontSize": 32,
+              "marginBottom": 16,
+              "marginTop": 16,
+            },
+            Array [
+              Object {
+                "color": "#FFFFFF",
+                "textTransform": "uppercase",
+              },
+              undefined,
+            ],
+            undefined,
+            undefined,
+          ]
+        }
+      >
+        Nova Transação
+      </Text>
+    </TouchableOpacity>
+  </View>
+</View>
+`;

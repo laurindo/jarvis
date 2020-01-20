@@ -1,84 +1,53 @@
-import React, {useEffect} from 'react';
-import {ScrollView, StyleSheet, Text, View} from "react-native";
+import React from 'react';
+import {ScrollView, StyleSheet, View} from "react-native";
 // Store
 import {Transaction} from "../../store";
 // Components
 import Container from "../../components/container";
 import TransactionList from "../../components/transactionList";
 import Button from "../../components/button";
-
+import HeaderTotal from "../../components/total/header-total";
 import {headerConfig} from "../../navigation/config";
-import {SCALE_8} from "../../styles/spacing";
 import {sortString} from "../../utils/sort";
-import {PRIMARY} from "../../styles/colors";
-import {H3} from "../../components/typography";
-import Total from "../../components/total";
 import {getTotal} from "../../utils/number";
+import storage from "../../utils/storage";
+import {PRIMARY} from "../../styles/colors";
+import {SCALE_8} from "../../styles/spacing";
+import EmptyTransaction from "../../components/transactionList/empty-transaction";
 
-// Mock transactions (apenas pra testar a listagem)
-const TRANSACTIONS = [{
-	label: "notebook",
-	value: 2000.98,
-	type: "entrada",
-	createdAt: "2020-01-19T00:59:14.495Z"
-}, {
-	label: "t2",
-	value: 150.20,
-	type: "saida",
-	createdAt: "2019-02-05T00:59:14.495Z"
-}, {
-	label: "t2",
-	value: 150.20,
-	type: "entrada",
-	createdAt: "2019-09-19T00:59:14.495Z"
-}, {
-	label: "t2",
-	value: 150.20,
-	type: "entrada",
-	createdAt: "2020-01-19T00:59:14.495Z"
-}, {
-	label: "t2",
-	value: 150.20,
-	type: "entrada",
-	createdAt: "2017-01-19T00:59:14.495Z"
-}, {
-	label: "t2",
-	value: 150.20,
-	type: "saida",
-	createdAt: "2019-01-19T00:59:14.495Z"
-}, {
-	label: "t2",
-	value: 150.20,
-	type: "entrada",
-	createdAt: "2018-01-19T00:59:14.495Z"
-}];
-
-export default function TransactionsScreen() {
-
+export default function TransactionsScreen({navigation}) {
 	const transactions = React.useContext(Transaction.State);
 	const dispatch = React.useContext(Transaction.Dispatch);
+	const displayTotal = () => getTotal(transactions.map(t => parseFloat(t.value)));
 
-	useEffect(() => {
-		setTimeout(() => {
-			dispatch({
-				type: "ADD_ENTRADA",
-				payload: sortString(TRANSACTIONS, 'createdAt', 'desc')
-			});
-		}, 5000);
+	React.useEffect(() => {
+		async function fetchData() {
+			try {
+				const transactions = await storage.getData('TRANSACTIONS');
+				transactions && dispatch({
+					type: "MERGE_TRANSACTIONS",
+					payload: transactions
+				});
+			} catch (e) {
+			}
+		}
+
+		fetchData();
 	}, []);
 
 	return (
 		<Container style={styles.container}>
-			<Total value={transactions.length && getTotal(transactions.map(t => t.value))}/>
+			{transactions.length ? <HeaderTotal title="Total" value={displayTotal()}/> : null}
 			<View style={styles.scroll}>
 				{transactions.length ? (
 					<ScrollView testID="transactions">
-						{transactions.map((transaction, index) => <TransactionList key={index} value={transaction}/>)}
+						{sortString(transactions, 'createdAt', 'desc')
+							.map((transaction, index) => <TransactionList key={index} value={transaction}/>)}
 					</ScrollView>
-				) : <Text testID="loading">loading...</Text>}
+				) : <EmptyTransaction id="no-transactions" message="Você não possui transações"/>}
 			</View>
 			<View>
-				<Button title="Nova Transação" onPress={() => alert("nova transação")}/>
+				<Button title="Nova Transação" onPress={() => navigation.navigate('Modal')}/>
 			</View>
 		</Container>
 	);
@@ -97,6 +66,11 @@ const styles = StyleSheet.create({
 	total: {
 		flexDirection: "row",
 		justifyContent: "space-between"
+	},
+	loadingTotal: {
+		flexDirection: "row",
+		justifyContent: "flex-end",
+		padding: SCALE_8
 	}
 });
 
