@@ -33,3 +33,12 @@ Pra garantir, vamos checar primeiro?  ``yarn test``
 ### Startando, 3...2...1
 Rode em seu terminal ``yarn start`` , pls
 
+### Links
+Expo(https://expo.io/@dslaurindo/jarvis)
+
+## Screenshot
+
+![image](https://bit.ly/30GjYVo)
+![image](https://bit.ly/30HSgaV)
+![image](https://bit.ly/38ECsbV)
+
