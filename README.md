@@ -14,7 +14,7 @@ Jarvis é um projeto construido em React Native para criação, listagem e contr
 
 Instalação Rapida: => [Clique aqui - Expo Link](https://expo.io/@dslaurindo/jarvis)
 
-* O projeto está rodando, pois ele me dá uma maneira rapida de iniciar um app em Recat Native
+* O projeto está rodando no Expo, pois ele me dá uma maneira rapida de iniciar um app em Recat Native
 * Link (https://expo.io/)
 * Para instalar o projeto do zero(https://facebook.github.io/react-native/docs/getting-started)
 * Basicamente:
