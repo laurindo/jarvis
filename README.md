@@ -12,6 +12,8 @@ Jarvis é um projeto construido em React Native para criação, listagem e contr
 
 ### Antes de começar, Jarvis solicita que você leia as instruções abaixo:
 
+Instalação Rapida: => [Clique aqui - Expo Link](https://expo.io/@dslaurindo/jarvis)
+
 * O projeto está rodando, pois ele me dá uma maneira rapida de iniciar um app em Recat Native
 * Link (https://expo.io/)
 * Para instalar o projeto do zero(https://facebook.github.io/react-native/docs/getting-started)
@@ -32,9 +34,6 @@ Pra garantir, vamos checar primeiro?  ``yarn test``
 
 ### Startando, 3...2...1
 Rode em seu terminal ``yarn start`` , pls
-
-### Links
-Expo(https://expo.io/@dslaurindo/jarvis)
 
 ## Screenshot
 
