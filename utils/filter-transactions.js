@@ -1,0 +1,1 @@
+export const filterTransactions = (values, key, filterBy) => values.filter(v => v[key] === filterBy);

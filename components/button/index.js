@@ -1,11 +1,12 @@
 import React from "react";
 import {StyleSheet, TouchableOpacity} from "react-native";
 import {P2} from "../typography";
-import {SUCCESS, WHITE} from "../../styles/colors";
+import {GRAY_DARK, SECONDARY, SUCCESS, WHITE} from "../../styles/colors";
 
-const Button = ({title, buttonStyle, textStyle, onPress}) => {
+const Button = ({title, buttonStyle, disabled, cancel, textStyle, onPress}) => {
+	const styleClasses = !disabled ? [styles.button, buttonStyle, cancel && styles.cancelStyle] : [styles.button, styles.disabled, buttonStyle];
 	return (
-		<TouchableOpacity onPress={onPress} style={[styles.button, buttonStyle]}>
+		<TouchableOpacity disabled={disabled} onPress={onPress} style={styleClasses}>
 			<P2 style={[styles.text, textStyle]}>{title}</P2>
 		</TouchableOpacity>
 	);
@@ -24,10 +25,16 @@ const styles = StyleSheet.create({
 		shadowOffset: {height: 10, width: 0},
 		shadowRadius: 20,
 	},
+	cancelStyle: {
+		backgroundColor: GRAY_DARK,
+	},
 	text: {
 		textTransform: 'uppercase',
 		color: WHITE,
 	},
+	disabled: {
+		backgroundColor: SECONDARY
+	}
 });
 
 export default Button;

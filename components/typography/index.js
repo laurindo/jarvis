@@ -4,7 +4,7 @@ import {FONT_FAMILY_BOLD, FONT_FAMILY_LIGHT, FONT_FAMILY_REGULAR, FONT_SIZE_16, 
 import {SCALE_12, SCALE_8} from "../../styles/spacing";
 import {GRAY_MEDIUM, WHITE} from "../../styles/colors";
 
-const typography = (props, style) => <Text style={[style, props.style]}>{props.children}</Text>;
+const typography = (props, style) => <Text style={[style, props.style, props.center, props.noMargin]}>{props.children}</Text>;
 const H1 = props => typography(props, styles.H1);
 const H2 = props => typography(props, styles.H2);
 const H3 = props => typography(props, styles.H3);
@@ -63,6 +63,12 @@ const styles = StyleSheet.create({
 		marginBottom: SCALE_8,
 		color: GRAY_MEDIUM
 	},
+	center: {
+		textAlign: "center"
+	},
+	noMargin: {
+		margin: 0
+	}
 });
 
 export {H1, H2, H3, P1, P2, S1, S2}

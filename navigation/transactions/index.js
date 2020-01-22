@@ -7,7 +7,7 @@ import config from "../config";
 
 const TransactionsStack = createStackNavigator(
 	{
-		TransactionCreate: TransactionsScreen,
+		Transactions: TransactionsScreen,
 	},
 	config
 );

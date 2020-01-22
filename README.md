@@ -6,9 +6,19 @@ Jarvis é um projeto construido em React Native para criação, listagem e contr
 
 ### Tecnologias que fazem o Jarvis ser o que é
 * UI (React Native, React)
-* ??? Storage (firebase, local storage, , ainda pra definir)
-* ??? Gerenciamento de Estado (context API ou redux, ainda a definir)
-* Test (jest, react native library)
+* Storage (AsyncStorage)
+* Gerenciamento de Estado (context API, hooks do react)
+* Test (jest, @testing-library/native, renderHooks)
+
+### Antes de começar, Jarvis solicita que você leia as instruções abaixo:
+
+* O projeto está rodando, pois ele me dá uma maneira rapida de iniciar um app em Recat Native
+* Link (https://expo.io/)
+* Para instalar o projeto do zero(https://facebook.github.io/react-native/docs/getting-started)
+* Basicamente:
+    * npm install -g expo-cli
+    * conecte seu aparelho via USB, não se esqueça de habilitar a função de desenvolvedor
+    * instale o expo(https://play.google.com/store/apps/details?id=host.exp.exponent&hl=pt_BR) no seu aparelho e esteja conectado na mesma rede
 
 ### Como dar vida ao Jarvis?
 Antes de tudo, o Jarvis precisa de algumas ferramentas pré-instaladas. 

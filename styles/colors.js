@@ -9,7 +9,7 @@ export const BLACK = '#000000';
 // ACTIONS
 export const SUCCESS = '#2AC062';
 export const WARNING = '#ffae00';
-export const ALERT = '#EB1479';
+export const DANGER = '#EB1479';
 
 // GRAYSCALE
 export const GRAY_LIGHT = '#e6e6e6';
